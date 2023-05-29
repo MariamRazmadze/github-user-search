@@ -38,7 +38,11 @@ const octocat = {
   url: "https://api.github.com/users/octocat",
 };
 
-function SearchComponent() {
+interface SearchProps {
+  isMoon: boolean;
+}
+
+function SearchComponent(props: SearchProps) {
   const [enteredValue, setEnteredValue] = useState("");
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     if (event) {
@@ -59,7 +63,9 @@ function SearchComponent() {
 
   return (
     <div>
-      <form className={classes.form}>
+      <form
+        className={`${classes.form} ${props.isMoon ? classes.darkMode : ""}`}
+      >
         <div>
           <img
             src={iconSearch}
@@ -71,7 +77,9 @@ function SearchComponent() {
           type="text"
           name="userInput"
           id="userInput"
-          className={classes.userInput}
+          className={`${classes.userInput} ${
+            props.isMoon ? classes.darkMode : ""
+          }`}
           placeholder="Search GitHub username..."
           value={enteredValue}
           onChange={(e) => setEnteredValue(e.target.value)}

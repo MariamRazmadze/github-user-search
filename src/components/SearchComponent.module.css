@@ -9,6 +9,10 @@
   border-radius: 15px;
 }
 
+.form.darkMode {
+  background-color: var(--semiDark);
+}
+
 .userInput {
   font: inherit;
   border: none;
@@ -19,8 +23,17 @@
   margin-left: 0.5rem;
 }
 
+.userInput.darkMode {
+  color: var(--white);
+  background-color: transparent;
+}
+
 .userInput::placeholder {
   color: var(--darkSky);
+}
+
+.userInput.darkMode::placeholder {
+  color: var(--white);
 }
 
 .button {

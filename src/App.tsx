@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar isMoon={isMoon} handleClick={handleClick} />
-      <SearchComponent />
+      <SearchComponent isMoon={isMoon} />
     </div>
   );
 }
