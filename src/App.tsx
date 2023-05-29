@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import SearchComponent from "./components/SearchComponent";
 import Card from "./components/Card";
+import Summary from "./components/Summary";
 import { useState } from "react";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar isMoon={isMoon} handleClick={handleClick} />
       <SearchComponent isMoon={isMoon} />
       <Card isMoon={isMoon} />
+      <Summary isMoon={isMoon} />
     </div>
   );
 }
