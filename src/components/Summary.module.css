@@ -1,0 +1,33 @@
+.summary {
+  background-color: var(--lightBg);
+  border-radius: 10px;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  column-gap: 2rem;
+}
+
+.summary.darkMode {
+  background-color: red;
+}
+
+.summaryItem {
+  text-align: center;
+}
+
+.summaryTitle {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: var(--darkSky);
+  text-transform: capitalize;
+}
+
+.summaryAmount {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

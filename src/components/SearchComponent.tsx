@@ -1,35 +1,23 @@
 import classes from "./SearchComponent.module.css";
 import iconSearch from "../assets/icon-search.svg";
 import { useState } from "react";
-import axios from "axios";
 
 interface SearchProps {
   isMoon: boolean;
+  fetchData: (enteredValue: string) => void;
 }
 
 function SearchComponent(props: SearchProps) {
   const [enteredValue, setEnteredValue] = useState("");
-  const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    if (event) {
-      event.preventDefault();
-    }
-    axios
-      .get(`https://api.github.com/users/${enteredValue}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setEnteredValue("");
-      });
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    props.fetchData(enteredValue);
   };
-
   return (
     <div>
       <form
         className={`${classes.form} ${props.isMoon ? classes.darkMode : ""}`}
+        onSubmit={handleSubmit}
       >
         <div>
           <img
@@ -49,9 +37,7 @@ function SearchComponent(props: SearchProps) {
           value={enteredValue}
           onChange={(e) => setEnteredValue(e.target.value)}
         />
-        <button className={classes.button} onClick={handleClick}>
-          search
-        </button>
+        <button className={classes.button}>search</button>
       </form>
     </div>
   );
