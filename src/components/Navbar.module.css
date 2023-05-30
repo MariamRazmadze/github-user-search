@@ -1,4 +1,5 @@
 .navbar {
+  margin-top: 2rem;
   min-width: 20rem;
   display: flex;
   align-items: baseline;
@@ -34,4 +35,10 @@
 
 .iconSun {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    margin-top: 9rem;
+  }
 }

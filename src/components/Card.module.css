@@ -10,6 +10,16 @@
   background-color: var(--semiDark);
 }
 
+.userInfo.darkMode h2,
+.userInfo.darkMode p,
+.userInfo.darkMode a {
+  color: var(--white);
+}
+
+.userInfo.darkMode h2.login {
+  color: var(--electric);
+}
+
 .avatarDesktop {
   display: none;
 }

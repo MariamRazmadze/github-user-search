@@ -28,3 +28,9 @@ body {
   padding: 0 1.5rem 5rem 1.5rem;
   background-color: var(--lightBg);
 }
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 6rem;
+  }
+}

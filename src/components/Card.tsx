@@ -67,7 +67,11 @@ function Card(props: CardProps) {
               )}
             </div>
           </div>
-          <p className={classes.bio}>{props.data.bio}</p>
+          <p className={classes.bio}>
+            {props.data.bio
+              ? props.data.bio
+              : "Lorem ipsum dolor sit omet, consecteteur adipiscing elit. Donec odio. Quisque volutpat mottis eros."}
+          </p>
         </div>
         <Summary isMoon={props.isMoon} data={props.data} />
         <Contact isMoon={props.isMoon} data={props.data} />

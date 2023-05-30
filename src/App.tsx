@@ -11,7 +11,7 @@ function App() {
     name: "The Octocat",
     login: "octocat",
     created_at: "2011-01-25T18:44:36Z",
-    bio: null,
+    bio: "Lorem ipsum dolor sit omet, consecteteur adipiscing elit. Donec odio. Quisque volutpat mottis eros.",
     avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
     location: "San Francisco",
     blog: "https://github.blog",

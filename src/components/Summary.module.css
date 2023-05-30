@@ -10,7 +10,7 @@
 }
 
 .summary.darkMode {
-  background-color: red;
+  background-color: var(--dark);
 }
 
 .summaryItem {
